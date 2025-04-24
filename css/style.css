@@ -1,0 +1,211 @@
+/* Общие стили начало */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f1f1f1;
+    color: #333;
+    min-height: 100vh; /* Используйте 100vh, а не -webkit-fill-available */
+    display: flex;
+    flex-direction: column; 
+}
+
+a {/*Стиль текста в панели управления*/
+    color: #cecece;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block; /*  Добавлен для корректного margin-right */
+}
+
+a:hover { /* Изменение цвета при наведении */
+    background-image: linear-gradient(to right, #c8ca31, #faee7e); /* Градиентный фон */
+    background-clip: text; /* Применение градиента к тексту */
+    -webkit-background-clip: text; /* Для старых версий Chrome и Safari */
+    color: transparent; /* Текст становится прозрачным */
+}
+
+header { /* Стиль шапки  */
+    text-align: center;
+    background-color: #1d1d1d;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(8, 16, 136, 0.1);
+    font-size: 1em;
+    position: relative; /* Для абсолютного позиционирования */
+    height: 30px; /* Увеличили высоту для логотипа */
+    display: flex;
+    justify-content: center; /* Равномерное распределение */
+    align-items: center; /* Вертикальное выравнивание */
+    font-family: 'Montserrat', sans-serif; /* Добавили Montserrat */
+}
+header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 40px; /* Add margin to separate logo from text */
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;  /* Делаем навигацию flex-контейнером */
+    flex-direction: row; /* Элементы меню расположены в строку */
+    margin-top: 0; /* Убираем margin-top для основного меню */
+    /* Убираем базовые стили, они переопределяются классами hidden/visible */
+}
+
+nav a {
+    margin-right: 20px;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif; /* Добавили Montserrat */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+}
+
+.burger-menu {
+    display: none; /* Скрываем бургер-меню на больших экранах */
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+    transition: transform 0.3s ease; /* Добавлено для плавного перехода */
+}
+
+.burger-menu.close { /* Стиль для крестика */
+    content: "\2716"; /* Символ крестика (X) */
+}
+
+nav.mobile-menu { /* Стиль для мобильного меню */
+    position: absolute; /* Абсолютное позиционирование для выравнивания */
+    top: 100%; /* Располагаем под шапкой */
+    left: 0;
+    width: 100%; /* Ширина экрана */
+    background-color: #1d1d1d; /* Цвет фона как у шапки */
+    flex-direction: column; /* Элементы меню расположены в столбец */
+    z-index: 10; /* Чтобы бургер-меню было сверху */
+    border-bottom: 2px solid #444;
+    box-shadow: 0 2px 5px rgba(8, 16, 136, 0.1); /* Тень */
+}
+
+nav.mobile-menu a {
+    margin-right: 0;
+    display: block; /* Отображаем меню по вертикали */
+    padding: 10px 20px;
+    text-align: left; /* Выравнивание текста слева */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Разделитель между пунктами */
+}
+
+nav.mobile-menu a:last-child {
+    border-bottom: none; /* Удаляем границу у последнего элемента */
+}
+
+/* Медиазапросы */
+@media (max-width: 1000px) {
+    .burger-menu {
+        display: block;
+    }
+    nav {
+        display: none; /* Скрываем основное меню */
+    }
+    nav.mobile-menu {
+        display: block;
+    }
+
+    nav.mobile-menu { /* Стиль для мобильного меню */
+        position: absolute; /* Абсолютное позиционирование для выравнивания */
+        top: 100%; /* Располагаем под шапкой */
+        left: 0;
+        width: 100%; /* Ширина экрана */
+        background-color: #1d1d1d; /* Цвет фона как у шапки */
+        flex-direction: column; /* Элементы меню расположены в столбец */
+        z-index: 10; /* Чтобы бургер-меню было сверху */
+        border-bottom: 2px solid #444;
+        box-shadow: 0 2px 5px rgba(8, 16, 136, 0.1); /* Тень */
+    }
+    nav.mobile-menu a {
+        margin-right: 0;
+        display: block; /* Отображаем меню по вертикали */
+        padding: 10px 20px;
+        text-align: left; /* Выравнивание текста слева */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Разделитель между пунктами */
+    }
+    nav.mobile-menu a:last-child {
+        border-bottom: none; /* Удаляем границу у последнего элемента */
+    }
+}
+
+@media (min-width: 786px) { /* Изменено условие */
+    .burger-menu {
+        display: none;
+    }
+    nav {
+        display: flex; /* Показываем основное меню */
+    }
+    nav.mobile-menu {
+        display: none; /* Скрываем мобильное меню */
+    }
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Занимает остаток места между header и footer */
+}
+
+
+/* Стили для часов, даты */
+#clock, #date{
+    width: 20%;
+    border-radius: 30px;
+    font-size: 1.5em;
+    
+    align-items: center;
+    text-align: center;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    padding: 5px 35px;
+    background-color: #fff;
+   
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+ /* для ссылок на соц сети в футере*/
+ .social-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/* Общие стили конец */
+
+
+/*Стиль свайпера*/
+.mySwiper {
+    border-radius: 15px;
+    width: 78%;
+    height: 320px; 
+}
+
+.swiper-slide img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide h2 {
+    font-size: 1.2em;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+}
+

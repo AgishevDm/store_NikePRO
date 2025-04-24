@@ -1,0 +1,61 @@
+/* Стили для страницы входа */
+body {
+    font-family: 'Roboto', sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #202020; 
+    margin: 0;
+}
+
+.login-form {
+    background-color: #41484e; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    width: 350px; 
+    text-align: center; 
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-form label {
+    display: block; 
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+.login-form button {
+    background-color: #1f1a22; 
+    color: #fff;
+    padding: 12px 70px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+.login-form button:hover {
+    background-color: #4ed8d1; 
+}
+
+.login-form p {
+    margin-top: 10px;
+    color: red; 
+}

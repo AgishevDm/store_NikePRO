@@ -1,0 +1,43 @@
+/* Стили для НОВОСТЕЙ */
+#news-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 100px;  /* Отступы от краев */
+    margin: 0 auto; /* Центрирование блока */
+    max-width: 1320px; /* Максимальная ширина блока */
+    width: 100%;  /* Ширина блока */
+    box-sizing: border-box; /* Отступы включаются в общую ширину */
+}
+
+.news-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding: 2px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px; 
+    position: relative; 
+}
+
+.news-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 600; 
+    color: #333;
+}
+
+.news-content p {
+    text-indent: 2em; 
+    line-height: 1.8; 
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.news-date {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.9em;
+    color: #777;
+}

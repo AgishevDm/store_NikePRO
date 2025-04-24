@@ -1,0 +1,242 @@
+/* КОРЗИНА */
+
+/* Cписок добавленных в карзину товаров */
+#cart-content{
+    padding: 0px 190px; 
+    margin: 0 auto;
+    min-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#cart-content .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #fff;
+    gap: 10px;
+    min-height: 100px;
+}
+
+#cart-content input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px;
+}
+
+#cart-content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-right: 10px;
+    max-width: 100%; 
+}
+
+#cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+#cart-item-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+#cart-item-details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#cart-item-details .item-price {
+    font-weight: bold;
+}
+
+#cart-content button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #d11b1b;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    #cart-content .cart-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 5px;
+    }
+    #cart-content img {
+        width: calc(100% - 20px);
+        height: auto;
+        margin-bottom: 10px;
+    }
+    #cart-content button {
+        margin-top: 10px;
+        margin-left: 0; 
+    }
+    #cart-content input[type="checkbox"]{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width: 500px){
+    #cart-content .cart-item{
+        gap: 0px;
+        padding: 0px;
+    }
+    #cart-content img{
+        margin-bottom: 0px;
+    }
+    #cart-content button{
+        margin-top: 0px;
+    }
+    #cart-content input[type="checkbox"]{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Выбранные товары и Итоговые значения*/
+#order-summary {
+    width: calc(100% - 400px);
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#order-summary h3 {
+    margin-left: 20px;
+}
+
+#order-summary p {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.order-item img {
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#place-order-button {
+    width: calc(100% - 400px);
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4123ac;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1,2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#place-order-button:hover {
+    background-color: #512da8;
+}
+
+
+/* Стили для формы заказа */
+#order-form {
+    background-color: #f4f4f4;
+    width: calc(100% - 400px);
+    font-family: sans-serif;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  
+  #order-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+  }
+  
+  #order-form label {
+    margin-left: 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; 
+  }
+  
+  #order-form input[type="text"],
+  #order-form input[type="tel"],
+  #order-form input[type="email"],
+  #order-form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-left: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  #order-form select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  #order-form select::-ms-expand {
+      display: none; 
+  }
+  
+  #order-form select::after {
+      content: "\279C";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+  }
+  
+  #order-form button[type="submit"] {
+    background-color: #4123ac; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+    width: 100%; 
+    margin-top: 20px;
+  }
+  
+  #order-form button[type="submit"]:hover {
+    background-color: #512da8; 
+  }

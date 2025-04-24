@@ -1,0 +1,76 @@
+/* Доставка и оплата */
+
+.info-block-container { 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 20px 100px;
+    margin: 0 auto;
+    max-width: 1320px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-block {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 25px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px; 
+    width: calc(50% - 20px); 
+    min-width: 300px; 
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .info-block {
+        width: 100%;
+        margin-right: 0; 
+    }
+}
+
+
+
+.info-block ol {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.info-block ol li {
+    margin-bottom: 10px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 24px; 
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-top: -5px;
+}
+
+.main-paragraph {
+    text-indent: 2em; 
+    line-height: 1.8;
+    font-size: 1em;
+    color: #555;
+}
+
+.main-link {
+    color: #007bff;
+    font-weight: bold;
+    margin-left: -37px;
+}
+
+.final-message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: cursive;
+    color: #333;
+    clear: both; 
+}

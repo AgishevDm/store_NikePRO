@@ -1,0 +1,272 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ececec;
+    color: #333;
+    display: flex; 
+}
+
+main {
+    display: flex; 
+    justify-content: center; 
+    height: calc(100vh - 100px); 
+    padding: 0 20px; /* Отступы слева и справа */
+    box-sizing: border-box; /* чтобы padding не увеличивал ширину */
+}
+
+main section {
+    text-align: center; 
+}
+
+
+
+
+/* Стили для Сайдбара */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}
+
+.sidebar-title {
+    font-size: 24px;
+}
+
+.toggle-sidebar {
+    background: none;
+    border: none;
+    color: #ffffff; /* Цвет стрелки */
+    cursor: pointer;
+}
+.toggle-sidebar.black {
+    color: #000000; /* Цвет стрелки для уменьшенного сайдбара */
+}
+
+.logo {
+    width: 40px; 
+    height: auto; 
+    margin-right: 10px; 
+    margin-left: 15%;
+    border-radius: 10px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: block; 
+    margin: 15px; 
+}
+
+.nav-text {
+    margin: 15px ;
+}
+
+.admin-sidebar {
+    position: relative;
+    width: 300px;
+    height: 3800px; 
+    background-color: #1f1a22;
+    padding-top: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+.admin-sidebar h1 {
+    color: #ffffff; 
+    text-align: center;
+    margin-left: -15px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar nav ul li {
+    width: 100%;
+}
+
+.admin-sidebar nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+   
+}
+
+.admin-sidebar nav ul li a:hover {
+    border-radius: 35px;
+    width: 100%;
+    height: 30px;
+    margin-left: 10%;
+    background-color: #ffffff; 
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 60px; 
+    }
+
+    .sidebar-title {
+        display: none; /* Скрываем заголовок при минимизации */
+    }
+
+    .nav-text {
+        display: none; /* Скрываем текст при уменьшении экрана */
+    }
+
+    .nav-icon {
+        margin: 0 auto; /* Центрируем иконки по горизонтали */
+    }
+
+    nav ul li {
+        height: 60px; /* Фиксированная высота для кликабельности */
+        text-align: center; /* Выравниваем текст по центру */
+    }
+    /* Новый стиль для иконок в узком сайдбаре */
+    .nav-icon {
+        margin: 0; /* Убираем отступы */
+        display: block; /* Отображаем иконки как блочные элементы */
+    }
+}
+
+/* Стили для Основного Контента на Админ-Страницах */
+.admin-main-content {
+    flex: 1; /* Занимает оставшееся пространство */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ececec;
+    height: max-content; 
+}
+
+.admin-main-content h2 {
+    margin-top: 0;
+}
+.h2 {
+  margin-left: 20px;
+}
+
+/* Стили для Таблиц */
+.admin-main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.admin-main-content table th, 
+.admin-main-content table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-main-content table th {
+    background-color: #25273a;
+    color: #ecf0f1;
+}
+
+.admin-main-content table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-main-content table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-main-content img {
+    max-width: 120px; 
+    height: auto;
+    border-radius: 8px; 
+    margin-right: 10px; 
+    display: block; 
+}
+
+/* Стили для Формы */
+.admin-main-content form {
+    border-radius: 25px; 
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.admin-main-content label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.admin-main-content input[type="text"],
+.admin-main-content input[type="number"],
+.admin-main-content input[type="tel"],
+.admin-main-content input[type="email"],
+.admin-main-content input[type="password"],
+.admin-main-content textarea,
+.admin-main-content select {
+    padding: 10px;
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 15px; /* Скругленные углы полей ввода */
+    font-size: 1em;
+    width: 100%; /* Ширина на всю доступную область */
+    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+}
+
+.admin-main-content textarea {
+    resize: vertical; 
+}
+
+.admin-main-content button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #292e7e;
+    color: #fff;
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.admin-main-content button:hover {
+    background-color: #3a5eff;
+}
+
+.btn-add:hover, .btn-edit:hover, .btn-delete:hover {
+    background-color: #219150;
+}
+
+.btn-delete:hover {
+    background-color: #a93226;
+}
+
+@media (max-width: 768px) {
+    
+    .admin-main-content {
+        margin-left: 60px; /* Отступ под новый сайдбар */
+        padding-left: 20px;
+    }
+    .admin-main-content table {
+        display: block; /* Разрешаем перенос таблицы */
+        overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    }
+
+    .admin-main-content table th, .admin-main-content table td {
+        white-space: nowrap; /* Запрещаем перенос слов в ячейках */
+    }
+}
+
