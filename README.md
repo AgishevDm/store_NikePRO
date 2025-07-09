@@ -2,6 +2,7 @@
 
 PHP, HTML, JS, CSS MySQL, 
 
+https://github.com/user-attachments/assets/19ec90c9-bd9e-4d48-86b8-e4ee5f911678
 
 Каталог товаров:
 
